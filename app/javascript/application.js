@@ -1,16 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Greeting from '../components/Greeting';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import greetingReducer from '../reducers/greetingReducer';
+const store = createStore(greetingReducer, applyMiddleware(thunk));
 const App = () => {
   return (
-    <Router>
-      <div>
-        <Route exact path="/" component={Greeting} />
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div>
+          <Route exact path="/" component={Greeting} />
+        </div>
+      </Router>
+    </Provider>
   );
 };
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<App />, document.getElementById('root'));
-});

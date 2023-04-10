@@ -15,7 +15,7 @@ class Greeting extends React.Component {
 }
 const mapStateToProps = state => {
   return {
-    greeting: state.greeting
+    greeting: state
   };
 };
 export default connect(mapStateToProps, { fetchGreeting })(Greeting);
