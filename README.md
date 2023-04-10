@@ -27,7 +27,7 @@
 
 # 📖Hello-world-rails-react   <a name="about-project"></a>
 
-**Hello-world-rails-reac** This project Ruby on Rails and React App that shows random languages greetings.
+**Hello-world-rails-react** This project Ruby on Rails and React App that shows random languages greetings.
 
 ## 🛠 Built With <a name="built-with"></a>
 
